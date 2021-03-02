@@ -20,9 +20,8 @@ class Bus():
         self.passengers = []
 
     def pick_up_from_stop(self, bus_stop):
-        if bus_stop.name == bus_stop:
-            # for passenger in bus_stop.queue:
-            #     self.passengers.append(passenger)
+        for passenger in bus_stop.queue:
+            self.passengers.append(passenger)
             bus_stop.clear()
-        # return len(self.passengers)
+        return len(self.passengers)
            
